@@ -73,6 +73,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3u5-AF-dfo" userLabel="Controls">
+                                <rect key="frame" x="16" y="319" width="343" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Switches"/>
+                                    <segment title="Button"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toogleControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="ib6-Me-2EN"/>
+                                </connections>
+                            </segmentedControl>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dko-5p-LhV">
+                                <rect key="frame" x="30" y="383" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="swiftChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="2h7-Ta-23g"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qbv-bV-rDP">
+                                <rect key="frame" x="303" y="383" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="swiftChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="PSP-Al-cGO"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zij-GK-lHW">
+                                <rect key="frame" x="24" y="383" width="335" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Do something"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0M7-G8-5v8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -99,8 +132,11 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="doSomethingButton" destination="zij-GK-lHW" id="dZr-t5-xhJ"/>
+                        <outlet property="leftSwitch" destination="dko-5p-LhV" id="mRX-EA-uFj"/>
                         <outlet property="nameField" destination="OOB-ot-2X1" id="MY3-3u-Kth"/>
                         <outlet property="numberField" destination="CFH-fU-zUC" id="itq-WS-Ag8"/>
+                        <outlet property="rightSwitch" destination="qbv-bV-rDP" id="zOp-Md-tiK"/>
                         <outlet property="sladerLabel" destination="9s2-FW-UOC" id="317-r7-gNe"/>
                     </connections>
                 </viewController>

@@ -14,10 +14,20 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *numberField;
 @property (weak, nonatomic) IBOutlet UILabel *sladerLabel;
+@property (weak, nonatomic) IBOutlet UISwitch *leftSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *rightSwitch;
+@property (weak, nonatomic) IBOutlet UIButton *doSomethingButton;
+
 
 -(IBAction)textFieldDoneEditing:(id)sender;
 -(IBAction)backgroundTab:(id)sender;
 - (IBAction)sladerChanged:(UISlider *)sender;
+- (IBAction)swiftChanged:(UISwitch *)sender;
+- (IBAction)toogleControl:(UISegmentedControl *)sender;
+- (IBAction)buttonPressed:(id)sender;
+
+
+
 
 @end
 

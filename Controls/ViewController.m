@@ -41,4 +41,26 @@
     self.sladerLabel.text = [NSString stringWithFormat:@"%d",progress];
 }
 
+- (IBAction)swiftChanged:(UISwitch *)sender {
+    BOOL setiing = sender.isOn;
+    [self.leftSwitch setOn:setiing animated:YES];
+    
+}
+
+- (IBAction)toogleControl:(UISegmentedControl *)sender {
+    // 0== переключает индекс
+    if (sender.selectedSegmentIndex == 0) {
+        self.leftSwitch.hidden = NO;
+        self.rightSwitch.hidden = NO;
+        self.doSomethingButton.hidden = YES;
+    }else{
+        self.leftSwitch.hidden = YES;
+        self.rightSwitch.hidden = YES;
+        self.doSomethingButton.hidden = NO;
+    }
+}
+
+- (IBAction)buttonPressed:(id)sender {
+}
+
 @end
