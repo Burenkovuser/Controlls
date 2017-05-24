@@ -16,7 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.sladerLabel.text = @"50";// чтобы пользователь увидел значение 50 сразу после загрузки
+    
 }
 
 
@@ -32,6 +34,11 @@
 -(void)backgroundTab:(id)sender {
     [_nameField resignFirstResponder];
     [_numberField resignFirstResponder];
+}
+
+- (IBAction)sladerChanged:(UISlider *)sender {
+    int progress = (int)lroundf(sender.value);//определяем текущее значение и округляем до целого
+    self.sladerLabel.text = [NSString stringWithFormat:@"%d",progress];
 }
 
 @end
